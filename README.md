@@ -1,0 +1,2 @@
+# Mindcology
+The intention behind the computer science project is to create a program-driven system that is unique and one that may be beneficial to the common people when thought over on a large scale. In this era of the pandemic, access to therapy and aid for mental health issues has been limited and the main intention of this project is to help curb that problem. This project is essentially a booking system by which a user can book sessions with associated therapy institutions and connect with support groups.
