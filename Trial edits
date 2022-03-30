@@ -22,7 +22,7 @@ def nameForInvoice(firstname,lastname):
 #Unsubscribe page
 def unsubscribe():
     def endSubscription():
-        connection = mysql.connector.connect(database='mindcology',user='root',password='Rash1420')
+        connection = mysql.connector.connect(database='mindcology',user='root',password='abc')
         cursor=connection.cursor()
         instruction = "DELETE FROM MAILING_LIST WHERE FIRSTNAME =  '%s' " % (a)
         try:
@@ -802,7 +802,7 @@ def register():
         psid=0
         if firstname.get()=="" or lastname.get()=="" or email.get()=="" or username.get()=="" or password.get()=="":
             messagebox.showerror("Error","All Fields are Required")
-        connection = mysql.connector.connect(database='mindcology',user='root',password='Rash1420')
+        connection = mysql.connector.connect(database='mindcology',user='root',password='abc')
         sql_select_Query = "select * from userinfo"
         cursor = connection.cursor()
         cursor.execute(sql_select_Query)
@@ -816,7 +816,7 @@ def register():
                 psid+=1
         if usid==0:
             if psid==0:
-                mydb = mysql.connector.connect(host="localhost", user="root", password="Rash1420", database="mindcology")
+                mydb = mysql.connector.connect(host="localhost", user="root", password="abc", database="mindcology")
                 mycursor = mydb.cursor()
                 sql = "INSERT INTO userinfo (FIRSTNAME, LASTNAME, USERNAME, PASSWORD) VALUES (%s, %s,%s,%s)"
                 val = (firstname.get(), lastname.get(),username.get(),password.get())
@@ -877,7 +877,7 @@ def login():
         error=0
         firstnameSend=''
         lastnameSend=''
-        connection = mysql.connector.connect(database='mindcology',user='root',password='Rash1420')
+        connection = mysql.connector.connect(database='mindcology',user='root',password='abc')
         sql_select_Query = "select * from userinfo"
         cursor = connection.cursor()
         cursor.execute(sql_select_Query)
